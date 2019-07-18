@@ -12,7 +12,12 @@ const styles = {
       justifyContent: 'center',
       display: 'flex'
   },
+  logo: {
+    display: 'flex',
+    maxWidth: 'calc(100% - 20px)'
+  },
   container: {
+
   },
   layout: {
     margin: `3rem auto`,
@@ -23,17 +28,21 @@ const styles = {
 
 const main = ({ data, classes }) => {
   return (
-    <Layout>
-      <div
-        className={classes.fullscreen}
-      >
-        <div className={classes.centermiddle}>
-            This is fullscreen!
+    <div>
+        <div
+            className={classes.fullscreen}
+        >
+            <img 
+                src='https://mariachijaliscocd.com/images/logo.png'
+                className={classes.logo}
+            />
         </div>
-      </div>
-      <h1>Hello world!</h1>
-      <div>{data.site.siteMetadata.title}</div>
-    </Layout>
+        <Layout>
+            <h1>Hello world!</h1>
+            <div>{data.site.siteMetadata.title}</div>
+        </Layout>
+
+    </div>
   )
 }
 
