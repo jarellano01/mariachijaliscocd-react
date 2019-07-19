@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
-import Fullscreen from "react-full-screen"
 
 import injectSheet from "react-jss"
 
@@ -29,15 +28,15 @@ const styles = {
 const main = ({ data, classes }) => {
   return (
     <div>
-        <div
-            className={classes.fullscreen}
-        >
-            <img 
-                src='https://mariachijaliscocd.com/images/logo.png'
-                className={classes.logo}
-            />
-        </div>
         <Layout>
+            <div
+                className={classes.fullscreen}
+            >
+                <img 
+                    src='https://mariachijaliscocd.com/images/logo.png'
+                    className={classes.logo}
+                />
+            </div>
             <h1>Hello world!</h1>
             <div>{data.site.siteMetadata.title}</div>
         </Layout>
