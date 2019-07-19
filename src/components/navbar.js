@@ -8,11 +8,13 @@ const styles = {
     top: 0,
     position: "fixed",
     width: "100%",
-    height: "30px",
+    height: "50px",
     paddingTop: "10px",
+    paddingBottom: "10px",
     display: "flex",
     justifyContent: "space-between",
-    alignItems: "flex-end",
+    alignItems: "center",
+    background: 'black',
   },
   navLinks: {
     display: "flex",
@@ -40,7 +42,7 @@ const pages = [
     },
     {
         path: '/gallery',
-        title: 'gallery'
+        title: 'Gallery'
     },
     {
         path: '/contact',

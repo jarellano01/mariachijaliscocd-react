@@ -4,7 +4,7 @@ import injectSheet from "react-jss"
 
 const styles = {
   container: {
-    marginTop: "60px",
+    marginTop: "80px",
   },
   body: {
     maxWidth: 800,

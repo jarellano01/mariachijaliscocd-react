@@ -7,6 +7,7 @@ import injectSheet from "react-jss"
 const styles = {
   cardContainer: {
     backgroundColor: "hsla(0,0%,66.3%,.62)",
+    marginBottom: '50px'
   },
   contentContainer: {
     display: "flex",
