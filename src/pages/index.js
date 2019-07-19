@@ -10,7 +10,6 @@ const styles = {
     alignItems: "center",
     justifyContent: "center",
     display: "flex",
-    flexDirection: 'column'
   },
   logo: {
     display: "flex",
@@ -23,28 +22,36 @@ const styles = {
     padding: `0 1rem`,
   },
   button: {
-      fontSize: '30px',
+    fontSize: "30px",
   },
   activeStyle: {
-      background: 'white',
-      color: 'green'
-  }
+    background: "white",
+    color: "green",
+  },
+  content: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    width: '90%'
+  },
 }
 
 const main = ({ data, classes }) => {
   return (
     <div className={classes.fullscreen}>
-      <img
-        src="https://mariachijaliscocd.com/images/logo.png"
-        className={classes.logo}
-      />
-      <Link 
-        to='/about' 
-        className={classes.button}
-        activeClassName={classes.activeStyle}
-      >
-      Learn More
-      </Link>
+      <div className={classes.content}>
+        <img
+          src="https://mariachijaliscocd.com/images/logo.png"
+          className={classes.logo}
+        />
+        <Link
+          to="/about"
+          className={classes.button}
+          activeClassName={classes.activeStyle}
+        >
+          Learn More
+        </Link>
+      </div>
     </div>
   )
 }
