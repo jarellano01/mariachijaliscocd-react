@@ -21,8 +21,7 @@ a:visited {
 }
 
 a:focus {
-  border-bottom: 1px solid;
-  background: white;
+    color: grey
 }
 
 a:hover {

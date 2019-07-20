@@ -1,13 +1,12 @@
 import React from "react"
-import { graphql } from "gatsby"
-import Layout, { LayoutBody } from "../components/layout"
-import nl2br from "react-nl2br"
 import injectSheet from "react-jss"
 
 const styles = {
   cardContainer: {
     backgroundColor: "hsla(0,0%,66.3%,.62)",
-    marginBottom: '50px'
+    marginBottom: '50px',
+    maxWidth: '800px',
+    width: '100%'
   },
   contentContainer: {
     display: "flex",
@@ -15,6 +14,7 @@ const styles = {
   },
   section: {
     padding: "10px",
+    width: '100%'
   },
   contentImage: {
     width: "100%",
