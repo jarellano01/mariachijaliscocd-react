@@ -20,19 +20,19 @@ const styles = {
 const iconList = [
   {
     icon: "faFacebook",
-    url: "",
+    url: "https://www.facebook.com/MariachiJaliscoCD",
   },
   {
     icon: "faInstagram",
-    url: "",
+    url: "https://www.instagram.com/MARIACHIJALISCOCD/",
   },
   {
     icon: "faYoutube",
-    url: "",
+    url: "https://www.youtube.com/channel/UC28d4H2up7fyraE6go6QohQ",
   },
   {
     icon: "faPhone",
-    url: "",
+    url: "tel:+18183239392",
   },
 ]
 
@@ -40,9 +40,9 @@ const main = ({ classes, className }) => {
   return (
     <div className={classnames(classes.iconBar, className)}>
       {iconList.map(icon => (
-        <Link key={icon.icon} to='/test'>
+        <a key={icon.icon} href={icon.url} target='_blank'>
           <FontAwesomeIcon icon={Icons[icon.icon]} />
-        </Link>
+        </a>
       ))}
     </div>
   )

@@ -21,6 +21,9 @@ const styles = {
     width: "100%",
     maxWidth: "250",
   },
+  description: {
+      fontSize: '1.4em'
+  }
 }
 
 const main = ({ data, classes }) => {
@@ -35,9 +38,9 @@ const main = ({ data, classes }) => {
               src="https://mariachijaliscocd.com/images/about_photo.jpg"
             />
             <ContentHeader>
-              <h1 className="Title">Our Story</h1>
+              <h1 className="Title">About Us</h1>
             </ContentHeader>
-            <ContentBody>{nl2br(description)}</ContentBody>
+            <ContentBody className={classes.description}>{nl2br(description)}</ContentBody>
           </CardSection>
         </CardContent>
       </Card>
