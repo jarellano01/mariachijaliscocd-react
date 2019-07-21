@@ -32,7 +32,6 @@ module.exports = {
         name: `Mariachi Jalisco de Carlos Daniel`,
         short_name: `Mariachi Jalisco CD`,
         start_url: `/`,
-        display: `standalone`,
         icon: 'favicon.png'
       },
     },

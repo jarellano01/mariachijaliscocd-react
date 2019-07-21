@@ -22,6 +22,7 @@ const styles = {
           gridTemplateColumns: "repeat(2, 1fr)"
       }
   },
+
   '@media (min-width: 700px)': {
       grid: {
           gridTemplateColumns: "repeat(2, 1fr)"

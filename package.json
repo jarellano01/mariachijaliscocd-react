@@ -10,7 +10,8 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "deploy": "firebase use prod; firebase deploy"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
@@ -42,6 +43,7 @@
     "react-full-screen": "^0.2.4",
     "react-helmet": "^5.2.1",
     "react-jss": "^8.6.1",
+    "react-media": "^1.9.2",
     "react-modal-video": "^1.2.2",
     "react-nl2br": "^0.4.0",
     "react-youtube": "^7.9.0",

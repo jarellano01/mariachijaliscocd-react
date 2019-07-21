@@ -4,7 +4,6 @@ import injectSheet from "react-jss"
 import IconBar from "../components/iconBar"
 import { ContextProviderComponent } from "./context"
 
-
 const styles = {
   container: {
     marginTop: "20px",
@@ -16,7 +15,7 @@ const styles = {
     margin: `auto`,
     padding: `0 1rem`,
     display: "flex",
-    justifyContent: 'center'
+    justifyContent: "center",
   },
   layout: {},
   footer: {
@@ -29,6 +28,15 @@ const styles = {
   iconBar: {
     width: "187px",
     fontSize: "25px",
+  },
+  "@media (max-width: 768px)": {
+      body: {
+          marginLeft: '0px',
+          marginRight: '0px'
+      },
+      container: {
+          marginTop: '60px'
+      }
   },
 }
 class Layout extends Component {

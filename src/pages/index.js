@@ -3,6 +3,7 @@ import { graphql } from "gatsby"
 import { LayoutBody } from "../layouts"
 import nl2br from "react-nl2br"
 import injectSheet from "react-jss"
+import aboutPhoto from '../img/about_photo.jpg'
 import {
   Card,
   CardContent,
@@ -35,7 +36,7 @@ const main = ({ data, classes }) => {
           <CardSection>
             <img
               className={classes.contentImage}
-              src="https://mariachijaliscocd.com/images/about_photo.jpg"
+              src={aboutPhoto}
             />
             <ContentHeader>
               <h1 className="Title">About Us</h1>
