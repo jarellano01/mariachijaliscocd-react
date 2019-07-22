@@ -23,8 +23,8 @@ const styles = {
   gridImageTitle: {
       position: 'absolute',
       left: '0px',
-      bottom: '3px',
       textAlign: 'center',
+      bottom: '0px',
       width: '100%',
       background: '#bb6e21',
       display: 'flex',
@@ -53,6 +53,10 @@ const styles = {
 const ImageModal = ({video, classes}) => {
   const [isOpen, setIsOpen] = useState(false)
   const videoId = video.snippet.resourceId.videoId
+  const closeModal = () => {
+      console.log('Closing Modal')
+      setIsOpen(false)
+  }
   return (
     <div key={videoId} className={classes.gridItem}>
       <img
@@ -66,9 +70,9 @@ const ImageModal = ({video, classes}) => {
       <div className={classes.gridImageTitle}>{video.snippet.title}</div>
       <ModalVideo
         channel="youtube"
-        isOpen={() => isOpen}
+        isOpen={isOpen}
         videoId={videoId}
-        onClose={() => setIsOpen(false)}
+        onClose={closeModal}
       />
     </div>
   )
