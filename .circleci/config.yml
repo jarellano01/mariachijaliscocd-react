@@ -28,15 +28,6 @@ jobs:
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
 workflows:
   version: 2
-  nightly: 
-    triggers: 
-      - schedule:
-          cron: '0 0 * * *'
-          filters:
-            branches:
-              only:
-                - master
-
   workflow:
     jobs:
       - build:
