@@ -40,9 +40,10 @@ const styles = {
       marginTop: "60px",
     },
     footer: {
-        flexDirection: 'column',
-        textAlign: 'center'
-    }
+      flexDirection: "column",
+      alignItems: "center",
+      textAlign: "center",
+    },
   },
 }
 const Layout = ({ classes, children }) => {
@@ -61,9 +62,7 @@ const Layout = ({ classes, children }) => {
       </div>
       <div className={classes.footer}>
         <p>Mariachi Jalisco de Carlos Daniel Paraguirre</p>
-        <div>
-          <IconBar className={classes.iconBar} />
-        </div>
+        <IconBar className={classes.iconBar} />
       </div>
     </ContextProviderComponent>
   )
