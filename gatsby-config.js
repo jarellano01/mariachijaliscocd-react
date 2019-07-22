@@ -32,7 +32,7 @@ module.exports = {
         name: `Mariachi Jalisco de Carlos Daniel`,
         short_name: `Mariachi Jalisco CD`,
         start_url: `/`,
-        icon: 'favicon.png'
+        icon: "favicon.png",
       },
     },
     `gatsby-plugin-offline`,
@@ -57,6 +57,14 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-layout`,
-    `gatsby-plugin-sass`
+    `gatsby-plugin-sass`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-144250697-1",
+        // Defines where to place the tracking script - `true` in the head and `false` in the body
+        head: false,
+      },
+    },
   ],
 }

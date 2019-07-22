@@ -14,8 +14,23 @@ const styles = {
     gridAutoRows: "auto",
     gridGap: "15px",
   },
+  gridItem: {
+      position: 'relative'
+  },
   gridImage: {
     width: "100%",
+  },
+  gridImageTitle: {
+      position: 'absolute',
+      left: '0px',
+      bottom: '3px',
+      textAlign: 'center',
+      width: '100%',
+      background: '#bb6e21',
+      display: 'flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      minHeight: "37px",
   },
   "@media (min-width: 500px)": {
     grid: {
@@ -48,6 +63,7 @@ const ImageModal = ({video, classes}) => {
         className={classes.gridImage}
         src={video.snippet.thumbnails.high.url}
       />
+      <div className={classes.gridImageTitle}>{video.snippet.title}</div>
       <ModalVideo
         channel="youtube"
         isOpen={() => isOpen}
@@ -58,6 +74,7 @@ const ImageModal = ({video, classes}) => {
   )
 }
 const ImageGridUS = ({ classes, videos }) => {
+    console.log(videos)
   return (
     <div className={classes.grid}>
       {videos.map(video => {
