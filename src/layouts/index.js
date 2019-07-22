@@ -55,6 +55,9 @@ const Layout = ({ classes, children }) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
+        <meta name="description" content="Mariachi Jalisco De Carlos Daniel Paraguirre" />
+
+        <title>Mariachi Jalisco CD</title>
       </Helmet>
       <div className={classes.container}>
         <NavBar mode={isTabletOrMobile ? "mobile" : "desktop"} />

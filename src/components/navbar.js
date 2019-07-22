@@ -5,7 +5,6 @@ import headerImage from "../img/logo.png"
 import hearerImageHorizontal from "../img/logo-horizontal.png"
 import IconBar from "./iconBar"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { useMediaQuery } from "react-responsive"
 
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import classnames from "classnames"

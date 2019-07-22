@@ -13,6 +13,7 @@ module.exports = {
   /* Your site config here */
   siteMetadata: {
     title: "Mariachi Jalisco",
+    siteUrl: 'https://mariachijaliscocd.com',
     description: `
         Mariachi Jalisco is a professional musical ensemble formed by young and talented musicians ready to make your next event one of a kind!
 
@@ -30,9 +31,13 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Mariachi Jalisco de Carlos Daniel`,
+        description: `Mariachi Jalisco de Carlos Daniel Paraguirre. Ready to serve your next event.`,
         short_name: `Mariachi Jalisco CD`,
         start_url: `/`,
         icon: "favicon.png",
+        background_color: `black`,
+        display: `standalone`,
+        theme_color: `black`,
       },
     },
     `gatsby-plugin-offline`,
@@ -66,5 +71,7 @@ module.exports = {
         head: false,
       },
     },
+    `gatsby-plugin-catch-links`,
+    'gatsby-plugin-robots-txt'
   ],
 }
