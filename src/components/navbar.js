@@ -153,7 +153,7 @@ const NavBar = ({ classes, mode }) => {
           onClick={() => setOpen(true)}
           className={classes.bars}
         />
-        <div>Mariachi Jalisco CD</div>
+        <div>Mariachi Jalisco</div>
       </div>
       <div className={navClass} onClick={() => setOpen(false)}>
         {renderContent({
