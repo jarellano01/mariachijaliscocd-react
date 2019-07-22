@@ -2,9 +2,6 @@
 version: 2
 jobs:
   build:
-    branches:
-      only:
-        - "master"
     docker:
       - image: circleci/node:10
     working_directory: ~/gatsby-site
@@ -29,3 +26,21 @@ jobs:
       - run:
           name: Firebase Deploy
           command: ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
+workflows:
+  version: 2
+  nightly: 
+    triggers: 
+      - schedule:
+          cron: '0 0 * * *'
+          filteres:
+          branches:
+            only:
+              - master
+
+  workflow:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only:
+              - master
