@@ -53,10 +53,7 @@ const styles = {
 const ImageModal = ({video, classes}) => {
   const [isOpen, setIsOpen] = useState(false)
   const videoId = video.snippet.resourceId.videoId
-  const closeModal = () => {
-      console.log('Closing Modal')
-      setIsOpen(false)
-  }
+  const closeModal = () => setIsOpen(false)
   return (
     <div key={videoId} className={classes.gridItem}>
       <img

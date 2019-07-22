@@ -13,6 +13,7 @@ import classnames from "classnames"
 const styles = {
   navbar: {
     position: "fixed",
+    zIndex: 100,
     paddingTop: "10px",
     paddingBottom: "10px",
     display: "flex",
@@ -64,7 +65,8 @@ const styles = {
     marginRight: "20px",
   },
   topBar: {
-    display: 'None',
+    zIndex: 101,
+    display: "None",
     position: "fixed",
     height: "50px",
     top: 0,
@@ -92,7 +94,7 @@ const styles = {
   },
   "@media (max-width: 768px)": {
     topBar: {
-        display: 'flex'
+      display: "flex",
     },
     navbar: {
       width: "200px",
@@ -101,6 +103,15 @@ const styles = {
       height: "100vh",
       transform: "translate3d(-200px, 0, 0)",
       transition: "transform .7s cubic-bezier(0, .52, 0, 1)",
+    },
+    overlay: {
+      width: "100%",
+      position: "fixed",
+      zIndex: 100,
+      left: 0,
+      top: 0,
+      height: "100vh",
+      background: "#00000033",
     },
   },
 }
@@ -144,7 +155,10 @@ const NavBar = ({ classes, mode }) => {
 
   const topBarClass = !open ? classes.topBar : classes.hidden
   const logo = isTabletOrMobile ? hearerImageHorizontal : headerImage
-  const navClass = classnames(classes.navbar, open ? classes.navBarOpen : undefined)
+  const navClass = classnames(
+    classes.navbar,
+    open ? classes.navBarOpen : undefined
+  )
   return (
     <div>
       <div className={topBarClass}>
@@ -155,7 +169,8 @@ const NavBar = ({ classes, mode }) => {
         />
         <div>Mariachi Jalisco</div>
       </div>
-      <div className={navClass} onClick={() => setOpen(false)}>
+      <div className={open ? classes.overlay : classes.hidden} onClick={() => setOpen(false)} ></div>
+      <div className={navClass} onClick={() => setOpen(false)} >
         {renderContent({
           classes,
           logo,
