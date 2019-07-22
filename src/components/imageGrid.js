@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
 import injectSheet from "react-jss"
 import ModalVideo from "react-modal-video"
 import "../styles/modal.scss"
@@ -37,22 +37,15 @@ const styles = {
 
 const ImageGridUS = ({ classes, videos }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [videoId, setVideoId] = useState(0)
-  console.log(videos)
   return (
     <div className={classes.grid}>
       {videos.map(video => (
         <div key={video.id} className={classes.gridItem}>
-          {/* <YouTube
-              videoId={video.id}
-              className={classes.gridImage}
-              modestBranding={true}
-            /> */}
-          <img
+         <img
             onClick={() => {
               setIsOpen(true)
-              setVideoId(video.id)
             }}
+            alt='gridImage'
             className={classes.gridImage}
             src={video.snippet.thumbnails.high.url}
           />

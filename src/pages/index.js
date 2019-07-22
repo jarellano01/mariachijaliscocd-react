@@ -35,6 +35,7 @@ const main = ({ data, classes }) => {
         <CardContent>
           <CardSection>
             <img
+              alt='contentImage'
               className={classes.contentImage}
               src={aboutPhoto}
             />

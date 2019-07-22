@@ -40,6 +40,7 @@ const main = ({ data, classes }) => {
     <div className={classes.fullscreen}>
       <div className={classes.content}>
         <img
+          alt='logo'
           src="https://mariachijaliscocd.com/images/logo.png"
           className={classes.logo}
         />

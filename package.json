@@ -5,13 +5,14 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --no-uglify",
     "develop": "gatsby develop",
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "deploy": "firebase use prod; firebase deploy"
+    "predeploy": "npm run build",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
@@ -23,6 +24,7 @@
     "@u-wave/react-youtube": "^0.7.0",
     "axios": "^0.19.0",
     "classnames": "^2.2.6",
+    "firebase-tools": "^7.1.1",
     "gatsby": "^2.13.25",
     "gatsby-plugin-import": "^2.1.5",
     "gatsby-plugin-jss": "^2.1.3",
@@ -46,6 +48,7 @@
     "react-media": "^1.9.2",
     "react-modal-video": "^1.2.2",
     "react-nl2br": "^0.4.0",
+    "react-responsive": "^8.0.0-beta",
     "react-youtube": "^7.9.0",
     "youtube-playlist-info": "^1.1.2"
   },

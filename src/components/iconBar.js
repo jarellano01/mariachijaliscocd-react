@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import injectSheet from "react-jss"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import * as Icons1 from "@fortawesome/free-brands-svg-icons"
@@ -40,7 +39,7 @@ const main = ({ classes, className }) => {
   return (
     <div className={classnames(classes.iconBar, className)}>
       {iconList.map(icon => (
-        <a key={icon.icon} href={icon.url} target='_blank'>
+        <a key={icon.icon} href={icon.url} target='_blank' rel="noopener noreferrer">
           <FontAwesomeIcon icon={Icons[icon.icon]} />
         </a>
       ))}

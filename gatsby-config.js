@@ -56,15 +56,6 @@ module.exports = {
       },
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-source-youtube`,
-      options: {
-        channelId: "UC28d4H2up7fyraE6go6QohQ",
-        apiKey: "AIzaSyC315zDWamEZQbRx22kUs11ExFXINrvdMI",
-        maxVideos: 50, // Defaults to 50
-      },
-    },
     `gatsby-plugin-layout`,
     `gatsby-plugin-sass`
   ],

@@ -37,7 +37,6 @@ const styles = {
 }
 
 const main = ({ data, classes }) => {
-  const description = data.site.siteMetadata.description
   return (
     <LayoutBody>
       <Card>

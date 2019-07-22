@@ -1,6 +1,5 @@
 import React from "react"
 import { getPlaylistVideos } from "../functions/youtubeApi"
-const { Provider, Consumer } = React.createContext(defaultContextValue)
 const defaultContextValue = {
   data: {
     // set your initial data shape here
@@ -8,6 +7,8 @@ const defaultContextValue = {
   },
   set: () => {},
 }
+
+const { Provider, Consumer } = React.createContext(defaultContextValue)
 class ContextProviderComponent extends React.Component {
   constructor() {
     super()

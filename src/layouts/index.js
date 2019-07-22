@@ -3,6 +3,8 @@ import NavBar from "../components/navbar"
 import injectSheet from "react-jss"
 import IconBar from "../components/iconBar"
 import { ContextProviderComponent } from "./context"
+import { useMediaQuery } from "react-responsive"
+import Helmet from "react-helmet"
 
 const styles = {
   container: {
@@ -30,33 +32,41 @@ const styles = {
     fontSize: "25px",
   },
   "@media (max-width: 768px)": {
-      body: {
-          marginLeft: '0px',
-          marginRight: '0px'
-      },
-      container: {
-          marginTop: '60px'
-      }
+    body: {
+      marginLeft: "0px",
+      marginRight: "0px",
+    },
+    container: {
+      marginTop: "60px",
+    },
+    footer: {
+        flexDirection: 'column',
+        textAlign: 'center'
+    }
   },
 }
-class Layout extends Component {
-  render() {
-    const { classes, children } = this.props
-    return (
-      <ContextProviderComponent>
-        <div className={classes.container}>
-          <NavBar />
-          <div className={classes.layout}>{children}</div>
+const Layout = ({ classes, children }) => {
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 768px)" })
+  return (
+    <ContextProviderComponent>
+      <Helmet>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+      </Helmet>
+      <div className={classes.container}>
+        <NavBar mode={isTabletOrMobile ? "mobile" : "desktop"} />
+        <div className={classes.layout}>{children}</div>
+      </div>
+      <div className={classes.footer}>
+        <p>Mariachi Jalisco de Carlos Daniel Paraguirre</p>
+        <div>
+          <IconBar className={classes.iconBar} />
         </div>
-        <div className={classes.footer}>
-          <p>Mariachi Jalisco de Carlos Daniel Paraguirre</p>
-          <div>
-            <IconBar className={classes.iconBar} />
-          </div>
-        </div>
-      </ContextProviderComponent>
-    )
-  }
+      </div>
+    </ContextProviderComponent>
+  )
 }
 
 const StyledLayout = injectSheet(styles)(Layout)
