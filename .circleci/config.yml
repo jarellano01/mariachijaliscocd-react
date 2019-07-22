@@ -32,10 +32,10 @@ workflows:
     triggers: 
       - schedule:
           cron: '0 0 * * *'
-          filteres:
-          branches:
-            only:
-              - master
+          filters:
+            branches:
+              only:
+                - master
 
   workflow:
     jobs:
