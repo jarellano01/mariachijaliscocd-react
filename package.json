@@ -43,6 +43,7 @@
     "gatsby-source-filesystem": "^2.1.5",
     "gatsby-source-youtube": "^1.0.1",
     "gatsby-transformer-sharp": "^2.2.4",
+    "graphql": "^14.4.2",
     "nl2br": "0.0.3",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
