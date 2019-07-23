@@ -12,7 +12,7 @@
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "predeploy": "npm run build",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy --token '$FIREBASE_TOKEN'"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
