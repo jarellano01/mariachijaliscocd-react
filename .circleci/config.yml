@@ -22,7 +22,7 @@ jobs:
             - ./node_modules
       - run:
           name: Firebase Deploy
-          command: npm run deploy
+          command: npm run deploy -- --token=$FIREBASE_TOKEN
 workflows:
   version: 2
   nightly: 
