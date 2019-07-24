@@ -32,13 +32,13 @@ workflows:
           filters:
             branches:
               only:
-                - master
+                - none
     jobs:
       - build:
           filters:
             branches:
               only:
-              - master
+              - none
 
   workflow:
     jobs:
