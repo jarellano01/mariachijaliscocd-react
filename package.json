@@ -49,7 +49,7 @@
     "graphql": "^14.4.2",
     "lodash": "^4.17.15",
     "nl2br": "0.0.3",
-    "node-sass": "^4.12.0",
+    "node-sass": "^7.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-full-screen": "^0.2.4",
