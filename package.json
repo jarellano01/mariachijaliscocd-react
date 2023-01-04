@@ -44,7 +44,7 @@
     "gatsby-plugin-sharp": "^2.2.8",
     "gatsby-source-custom-api": "^2.1.2",
     "gatsby-source-filesystem": "^2.1.5",
-    "gatsby-source-youtube": "^1.0.1",
+    "gatsby-source-youtube": "^2.5.1",
     "gatsby-transformer-sharp": "^2.2.4",
     "graphql": "^14.4.2",
     "lodash": "^4.17.15",
